@@ -1,0 +1,41 @@
+#pragma once
+
+#include <memory>
+
+#include "Core/Factory.h"
+
+namespace EC
+{
+	class GameObject;
+
+	class Component
+	{
+	protected:
+		static int s_IDcounter;
+		int m_componentID;
+
+		GameObject* m_gameObject;
+
+	public:
+		bool enabled = true;
+
+		Component();
+		int getComponentID();
+		GameObject* GetGameObject();
+		void SetEnable(bool enable);
+		virtual void Init();
+		void SetGameObject(GameObject* obj);
+
+		virtual ~Component() = 0;
+
+		//serialization
+	public:
+		template<class Archive>
+		void serialize(Archive& archive) {
+			archive(
+				enabled
+			);
+		}
+	};
+}
+

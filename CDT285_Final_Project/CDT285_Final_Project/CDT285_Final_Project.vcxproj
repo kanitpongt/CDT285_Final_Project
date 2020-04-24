@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{63810496-3161-47C3-A7D1-49DE91FBB305}</ProjectGuid>
+    <RootNamespace>CDT285FinalProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\include;$(SolutionDir)CDT285_Final_Project\source;$(SolutionDir)CDT285_Final_Project\vendor\glm;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\include;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\lib\x86;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\lib-vc2019;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\lib\Releases\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;glfw3.lib;opengl32.lib;SDL2_image.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)CDT285_Final_Project\source;$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\include;$(SolutionDir)CDT285_Final_Project\vendor\glm;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\include;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\lib\x86;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\lib-vc2019;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\lib\Releases\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;glfw3.lib;opengl32.lib;SDL2_image.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\core\EC\Component\Component.cpp" />
+    <ClCompile Include="source\core\EC\Component\MeshRenderer.cpp" />
+    <ClCompile Include="source\core\EC\Component\Skybox.cpp" />
+    <ClCompile Include="source\core\EC\Component\Transform.cpp" />
+    <ClCompile Include="source\core\EC\GameObject.cpp" />
+    <ClCompile Include="source\core\Input.cpp" />
+    <ClCompile Include="source\core\ProgramInfo.cpp" />
+    <ClCompile Include="source\graphic\CubeMesh.cpp" />
+    <ClCompile Include="source\graphic\GraphicCore.cpp" />
+    <ClCompile Include="source\graphic\PlaneMesh.cpp" />
+    <ClCompile Include="source\graphic\Cubemap.cpp" />
+    <ClCompile Include="source\graphic\SphereMesh.cpp" />
+    <ClCompile Include="source\graphic\Window.cpp" />
+    <ClCompile Include="source\physic\PhysicScene.cpp" />
+    <ClCompile Include="source\graphic\Renderer.cpp" />
+    <ClCompile Include="source\script\PlayerController.cpp" />
+    <ClCompile Include="source\World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\core\EC\Component\BehaviourScript.hpp" />
+    <ClInclude Include="source\core\EC\Component\Component.hpp" />
+    <ClInclude Include="source\core\EC\Component\MeshRenderer.hpp" />
+    <ClInclude Include="source\core\EC\Component\ScriptManager.hpp" />
+    <ClInclude Include="source\core\EC\Component\Skybox.hpp" />
+    <ClInclude Include="source\core\EC\Component\Transform.hpp" />
+    <ClInclude Include="source\core\EC\CoreEC.hpp" />
+    <ClInclude Include="source\core\EC\GameObject.hpp" />
+    <ClInclude Include="source\core\Factory.h" />
+    <ClInclude Include="source\core\Input.hpp" />
+    <ClInclude Include="source\core\ProgramInfo.h" />
+    <ClInclude Include="source\EngineCore.hpp" />
+    <ClInclude Include="source\graphic\camera.h" />
+    <ClInclude Include="source\graphic\CubeMesh.hpp" />
+    <ClInclude Include="source\graphic\GraphicCore.hpp" />
+    <ClInclude Include="source\graphic\Mesh.hpp" />
+    <ClInclude Include="source\graphic\PlaneMesh.hpp" />
+    <ClInclude Include="source\graphic\Shader.hpp" />
+    <ClInclude Include="source\graphic\Cubemap.hpp" />
+    <ClInclude Include="source\graphic\SphereMesh.hpp" />
+    <ClInclude Include="source\graphic\Window.hpp" />
+    <ClInclude Include="source\physic\PhysicScene.hpp" />
+    <ClInclude Include="source\graphic\Renderer.hpp" />
+    <ClInclude Include="source\script\PlayerController.hpp" />
+    <ClInclude Include="source\World.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
