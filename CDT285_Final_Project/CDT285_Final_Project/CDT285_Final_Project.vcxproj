@@ -87,12 +87,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\include;$(SolutionDir)CDT285_Final_Project\source;$(SolutionDir)CDT285_Final_Project\vendor\glm;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\include;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CDT285_Final_Project\vendor\bullet3\include;$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\include;$(SolutionDir)CDT285_Final_Project\source;$(SolutionDir)CDT285_Final_Project\vendor\glm;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\include;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\lib\x86;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\lib-vc2019;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\lib\Releases\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)CDT285_Final_Project\vendor\bullet3\lib;$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\lib\x86;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\lib-vc2019;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\lib\Releases\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;glew32s.lib;glfw3.lib;opengl32.lib;SDL2_image.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -116,15 +116,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)CDT285_Final_Project\source;$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\include;$(SolutionDir)CDT285_Final_Project\vendor\glm;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\include;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)CDT285_Final_Project\vendor\bullet3\include;$(SolutionDir)CDT285_Final_Project\source;$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\include;$(SolutionDir)CDT285_Final_Project\vendor\glm;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\include;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\lib\x86;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\lib-vc2019;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\lib\Releases\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glew32.lib;glew32s.lib;glfw3.lib;opengl32.lib;SDL2_image.lib;SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)CDT285_Final_Project\vendor\bullet3\lib;$(SolutionDir)CDT285_Final_Project\vendor\SDL2-2.0.5\lib\x86;$(SolutionDir)CDT285_Final_Project\vendor\glfw-3.3.bin.WIN32\lib-vc2019;$(SolutionDir)CDT285_Final_Project\vendor\glew-2.1.0\lib\Releases\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;glfw3.lib;opengl32.lib;SDL2_image.lib;SDL2.lib;Bullet3Common.lib;BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;msvcrt.lib;msvcmrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,6 +148,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\core\EC\Component\Component.cpp" />
     <ClCompile Include="source\core\EC\Component\MeshRenderer.cpp" />
+    <ClCompile Include="source\core\EC\Component\Rigidbody.cpp" />
     <ClCompile Include="source\core\EC\Component\Skybox.cpp" />
     <ClCompile Include="source\core\EC\Component\Transform.cpp" />
     <ClCompile Include="source\core\EC\GameObject.cpp" />
@@ -158,6 +160,7 @@
     <ClCompile Include="source\graphic\Cubemap.cpp" />
     <ClCompile Include="source\graphic\SphereMesh.cpp" />
     <ClCompile Include="source\graphic\Window.cpp" />
+    <ClCompile Include="source\physic\Collider.cpp" />
     <ClCompile Include="source\physic\PhysicScene.cpp" />
     <ClCompile Include="source\graphic\Renderer.cpp" />
     <ClCompile Include="source\script\PlayerController.cpp" />
@@ -167,6 +170,7 @@
     <ClInclude Include="source\core\EC\Component\BehaviourScript.hpp" />
     <ClInclude Include="source\core\EC\Component\Component.hpp" />
     <ClInclude Include="source\core\EC\Component\MeshRenderer.hpp" />
+    <ClInclude Include="source\core\EC\Component\Rigidbody.hpp" />
     <ClInclude Include="source\core\EC\Component\ScriptManager.hpp" />
     <ClInclude Include="source\core\EC\Component\Skybox.hpp" />
     <ClInclude Include="source\core\EC\Component\Transform.hpp" />
@@ -174,6 +178,7 @@
     <ClInclude Include="source\core\EC\GameObject.hpp" />
     <ClInclude Include="source\core\Factory.h" />
     <ClInclude Include="source\core\Input.hpp" />
+    <ClInclude Include="source\core\Math.hpp" />
     <ClInclude Include="source\core\ProgramInfo.h" />
     <ClInclude Include="source\EngineCore.hpp" />
     <ClInclude Include="source\graphic\camera.h" />
@@ -185,8 +190,11 @@
     <ClInclude Include="source\graphic\Cubemap.hpp" />
     <ClInclude Include="source\graphic\SphereMesh.hpp" />
     <ClInclude Include="source\graphic\Window.hpp" />
+    <ClInclude Include="source\physic\Collider.hpp" />
     <ClInclude Include="source\physic\PhysicScene.hpp" />
     <ClInclude Include="source\graphic\Renderer.hpp" />
+    <ClInclude Include="source\physic\PhysicDebugDrawer.hpp" />
+    <ClInclude Include="source\physic\PhysicUtilities.hpp" />
     <ClInclude Include="source\script\PlayerController.hpp" />
     <ClInclude Include="source\World.hpp" />
   </ItemGroup>

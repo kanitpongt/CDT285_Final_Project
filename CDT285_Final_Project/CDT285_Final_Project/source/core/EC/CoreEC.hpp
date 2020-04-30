@@ -5,3 +5,4 @@
 #include "Component/ScriptManager.hpp"
 #include "Component/MeshRenderer.hpp"
 #include "Component/Skybox.hpp"
+#include "Component/Rigidbody.hpp"

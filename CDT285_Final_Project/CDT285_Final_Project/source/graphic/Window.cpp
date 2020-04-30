@@ -51,7 +51,8 @@ namespace Graphic
 
 		void SetWindowShouldClose(bool i)
 		{
-			Core::ProgramInfo::GetInstance().close();
+			if (i)
+				Core::ProgramInfo::GetInstance().close();
 			glfwSetWindowShouldClose(glfwWindow, i);
 		}
 

@@ -21,7 +21,8 @@ namespace Graphic
 		g_renderer = new Renderer("source/graphic/Shader/vert.vs", "source/graphic/Shader/frag.fs");
 		glEnable(GL_DEPTH_TEST);
 		glDepthFunc(GL_LEQUAL);
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+		std::cout << "Initialized Graphic\n";
 	}
 
 	void Update(Camera& cam)

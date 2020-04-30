@@ -64,7 +64,7 @@ namespace EC
 	template<class T>
 	inline T* GameObject::AddComponent() {
 		auto component = Factory<T>::Create();
-
+		
 		m_components.push_back(component);
 		m_components.back()->SetGameObject(this);
 		m_components.back()->Init();
